@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="260" viewBox="0 0 420 260">
+  <defs>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#00E5FF"/>
+      <stop offset="1" stop-color="#00B4FF"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="420" height="260" rx="14" fill="#0A0F1F" stroke="#00E5FF" stroke-opacity="0.4"/>
+
+  <!-- Header -->
+  <text x="24" y="42" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="bold" fill="#FFFFFF">GitHub <tspan fill="#00E5FF">Stats</tspan></text>
+  <line x1="24" y1="56" x2="396" y2="56" stroke="#00E5FF" stroke-opacity="0.3"/>
+
+  <!-- Stat rows -->
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <text x="24" y="90" font-size="13" fill="#6B7A99">Total Commits</text>
+    <text x="24" y="114" font-size="22" font-weight="bold" fill="#FFFFFF">482</text>
+
+    <text x="24" y="146" font-size="13" fill="#6B7A99">Total PRs</text>
+    <text x="24" y="170" font-size="22" font-weight="bold" fill="#FFFFFF">18</text>
+
+    <text x="180" y="90" font-size="13" fill="#6B7A99">Total Issues</text>
+    <text x="180" y="114" font-size="22" font-weight="bold" fill="#FFFFFF">1</text>
+
+    <text x="180" y="146" font-size="13" fill="#6B7A99">Contributed to</text>
+    <text x="180" y="170" font-size="22" font-weight="bold" fill="#FFFFFF">7 repos</text>
+  </g>
+
+  <!-- Right side: ring with bars icon -->
+  <circle cx="340" cy="150" r="54" fill="none" stroke="#13203A" stroke-width="10"/>
+  <circle cx="340" cy="150" r="54" fill="none" stroke="url(#accent)" stroke-width="10"
+    stroke-linecap="round" stroke-dasharray="260 340" transform="rotate(-90 340 150)"/>
+  <rect x="318" y="138" width="8" height="24" rx="2" fill="#00E5FF"/>
+  <rect x="332" y="126" width="8" height="36" rx="2" fill="#00E5FF"/>
+  <rect x="346" y="134" width="8" height="28" rx="2" fill="#00E5FF"/>
+
+  <!-- Footer -->
+  <line x1="24" y1="208" x2="396" y2="208" stroke="#00E5FF" stroke-opacity="0.2"/>
+  <text x="24" y="232" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#00B4FF">sriesakkiamml96</text>
+</svg>
