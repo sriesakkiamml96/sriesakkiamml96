@@ -49,7 +49,20 @@
 </td>
 </tr>
 </table>
+<img src="bottom-panels.svg" width="100%" alt="Contribution, Roadmap and Connect"/>
 
+<br/>
+
+<table>
+<tr>
+<td align="center" width="100%">
+<a href="https://github.com/sriesakkiamml96"><img src="https://img.shields.io/badge/-GitHub-0A0F1F?style=for-the-badge&logo=github&logoColor=00E5FF"/></a>
+<a href="https://www.linkedin.com/in/sri-esakkiammal-k-b-20b470420"><img src="https://img.shields.io/badge/-LinkedIn-0A0F1F?style=for-the-badge&logo=linkedin&logoColor=0A66C2"/></a>
+<a href="mailto:sriesakkiammalkb.sri@gmail.com"><img src="https://img.shields.io/badge/-Email-0A0F1F?style=for-the-badge&logo=gmail&logoColor=white"/></a>
+<a href="https://x.com/sri_esakkiammal"><img src="https://img.shields.io/badge/-X-0A0F1F?style=for-the-badge&logo=x&logoColor=white"/></a>
+</td>
+</tr>
+</table>
 
 </td>
 
@@ -68,31 +81,4 @@
 </tr>
 </table>
 
-<table>
-<tr>
-<td width="34%" valign="top" align="center">
-<h3>🚀 Contribution Graph</h3>
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=sriesakkiamml96&bg_color=0A0F1F&color=00E5FF&line=00B4FF&point=FFFFFF&area=true&hide_border=true" width="100%"/>
-<br/><sub>Learn • Build • Innovate • Automate ✨</sub>
-</td>
 
-<td width="33%" valign="top">
-<h3>🎯 Learning Roadmap</h3>
-✅ Strengthen Python Fundamentals<br/>
-✅ Learn Git &amp; GitHub<br/>
-⚪ Explore OpenCV<br/>
-⚪ Build Real Projects<br/>
-⚪ Explore Robotics &amp; ROS 2
-</td>
-
-<td width="33%" valign="top" align="center">
-<h3>🌟 Connect With Me</h3>
-<a href="https://github.com/sriesakkiamml96"><img src="https://img.shields.io/badge/-GitHub-0A0F1F?style=for-the-badge&logo=github&logoColor=00E5FF"/></a>
-<a href="https://www.linkedin.com/in/sri-esakkiammal-k-b-20b470420"><img src="https://img.shields.io/badge/-LinkedIn-0A0F1F?style=for-the-badge&logo=linkedin&logoColor=0A66C2"/></a>
-<a href="mailto:sriesakkiammalkb.sri@gmail.com"><img src="https://img.shields.io/badge/-Email-0A0F1F?style=for-the-badge&logo=gmail&logoColor=white"/></a>
-<a href="https://x.com/sri_esakkiammal"><img src="https://img.shields.io/badge/-X-0A0F1F?style=for-the-badge&logo=x&logoColor=white"/></a>
-<br/><br/>
-<i>Let’s build something amazing together!</i>
-</td>
-</tr>
-</table>
