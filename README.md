@@ -49,20 +49,7 @@
 </td>
 </tr>
 </table>
-<img src="bottom-panels.svg" width="100%" alt="Contribution, Roadmap and Connect"/>
 
-<br/>
-
-<table>
-<tr>
-<td align="center" width="100%">
-<a href="https://github.com/sriesakkiamml96"><img src="https://img.shields.io/badge/-GitHub-0A0F1F?style=for-the-badge&logo=github&logoColor=00E5FF"/></a>
-<a href="https://www.linkedin.com/in/sri-esakkiammal-k-b-20b470420"><img src="https://img.shields.io/badge/-LinkedIn-0A0F1F?style=for-the-badge&logo=linkedin&logoColor=0A66C2"/></a>
-<a href="mailto:sriesakkiammalkb.sri@gmail.com"><img src="https://img.shields.io/badge/-Email-0A0F1F?style=for-the-badge&logo=gmail&logoColor=white"/></a>
-<a href="https://x.com/sri_esakkiammal"><img src="https://img.shields.io/badge/-X-0A0F1F?style=for-the-badge&logo=x&logoColor=white"/></a>
-</td>
-</tr>
-</table>
 
 </td>
 
@@ -74,6 +61,14 @@
 <br/><br/>
 
 <img src="cartoon-robot.svg" width="500%"/>
+   <img src="social-anime.svg" width="100%" alt="Connect"/>
+
+   <div align="center">
+   <a href="https://github.com/sriesakkiamml96"><img src="https://img.shields.io/badge/GitHub-0A0F1F?style=flat-square&logo=github&logoColor=00E5FF&labelColor=0A0F1F"/></a>
+   <a href="https://www.linkedin.com/in/sri-esakkiammal-k-b-20b470420"><img src="https://img.shields.io/badge/LinkedIn-0A0F1F?style=flat-square&logo=linkedin&logoColor=0A66C2&labelColor=0A0F1F"/></a>
+   <a href="mailto:sriesakkiammalkb.sri@gmail.com"><img src="https://img.shields.io/badge/Email-0A0F1F?style=flat-square&logo=gmail&logoColor=white&labelColor=0A0F1F"/></a>
+   <a href="https://x.com/sri_esakkiammal"><img src="https://img.shields.io/badge/X-0A0F1F?style=flat-square&logo=x&logoColor=white&labelColor=0A0F1F"/></a>
+   </div>
 
 </td>
 
