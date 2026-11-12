@@ -67,9 +67,15 @@
 </td>
 
 <td width="32%" valign="top" align="center">
-
+  
 <h3>📊 GitHub Stats</h3>
-<img src="stats-card.svg" width="100%"/>
+<img src="stats-card.svg" width="450%"/>
+
+<br/><br/>
+
+<img src="cartoon-robot.svg" width="500%"/>
+
+</td>
 
 </td>
 </tr>
