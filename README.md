@@ -25,27 +25,27 @@
 <br/>
 
 <h3>📁 Featured Projects</h3>
-
-<table>
-<tr>
-<td align="center" width="25%">
-<img src="assets/project1.png" width="140"/><br/>
-<b>Image Processing<br/>with OpenCV</b><br/>🔵 Planned
-</td>
-<td align="center" width="25%">
-<img src="assets/project2.png" width="140"/><br/>
-<b>AI Ambulance<br/>Priority System</b><br/>🟣 Planned
-</td>
-<td align="center" width="25%">
-<img src="assets/project3.png" width="140"/><br/>
-<b>Robot Vision<br/>Simulation</b><br/>🟢 Future Goal
-</td>
-<td align="center" width="25%">
-<img src="assets/project4.png" width="140"/><br/>
-<b>Face Detection<br/>Demo</b><br/>🔵 Planned
-</td>
-</tr>
-</table>
+<img src="featured-projects.svg" width="100%"/>
+   <table>
+   <tr>
+   <td align="center" width="25%">
+   <img src="assets/project1.png" width="200"/><br/>
+   <b>Image Processing<br/>with OpenCV</b><br/>🔵 Planned
+   </td>
+   <td align="center" width="25%">
+   <img src="assets/project2.png" width="200"/><br/>
+   <b>AI Ambulance<br/>Priority System</b><br/>🟣 Planned
+   </td>
+   <td align="center" width="25%">
+   <img src="assets/project3.png" width="200"/><br/>
+   <b>Robot Vision<br/>Simulation</b><br/>🟢 Future Goal
+   </td>
+   <td align="center" width="25%">
+   <img src="assets/project4.png" width="200"/><br/>
+   <b>Face Detection<br/>Demo</b><br/>🔵 Planned
+   </td>
+   </tr>
+   </table>
 
 </td>
 
