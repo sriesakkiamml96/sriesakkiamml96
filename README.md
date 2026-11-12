@@ -23,33 +23,37 @@
 <img src="skills-swag.svg" width="100%" alt="My Skills and Current Focus"/>
 
 <br/>
+<img src="projects-header.svg" width="100%" alt="Featured Projects"/>
 
-<h3>📁 Featured Projects</h3>
-<img src="featured-projects.svg" width="100%"/>
-   <table>
-   <tr>
-   <td align="center" width="25%">
-   <img src="assets/project1.png" width="200"/><br/>
-   <b>Image Processing<br/>with OpenCV</b><br/>🔵 Planned
-   </td>
-   <td align="center" width="25%">
-   <img src="assets/project2.png" width="200"/><br/>
-   <b>AI Ambulance<br/>Priority System</b><br/>🟣 Planned
-   </td>
-   <td align="center" width="25%">
-   <img src="assets/project3.png" width="200"/><br/>
-   <b>Robot Vision<br/>Simulation</b><br/>🟢 Future Goal
-   </td>
-   <td align="center" width="25%">
-   <img src="assets/project4.png" width="200"/><br/>
-   <b>Face Detection<br/>Demo</b><br/>🔵 Planned
-   </td>
-   </tr>
-   </table>
+<table>
+<tr>
+<td align="center" width="25%">
+<img src="assets/project1.png" width="200"/><br/><br/>
+<b>Image Processing</b><br/>with OpenCV<br/><br/>
+<img src="https://img.shields.io/badge/STATUS-PLANNED-00B4FF?style=flat-square&labelColor=0A0F1F"/>
+</td>
+<td align="center" width="25%">
+<img src="assets/project2.png" width="200"/><br/><br/>
+<b>AI Ambulance</b><br/>Priority System<br/><br/>
+<img src="https://img.shields.io/badge/STATUS-PLANNED-A78BFA?style=flat-square&labelColor=0A0F1F"/>
+</td>
+<td align="center" width="25%">
+<img src="assets/project3.png" width="200"/><br/><br/>
+<b>Robot Vision</b><br/>Simulation<br/><br/>
+<img src="https://img.shields.io/badge/STATUS-FUTURE_GOAL-22C55E?style=flat-square&labelColor=0A0F1F"/>
+</td>
+<td align="center" width="25%">
+<img src="assets/project4.png" width="200"/><br/><br/>
+<b>Face Detection</b><br/>Demo<br/><br/>
+<img src="https://img.shields.io/badge/STATUS-PLANNED-00B4FF?style=flat-square&labelColor=0A0F1F"/>
+</td>
+</tr>
+</table>
+
 
 </td>
 
-<td width="32%" valign="top" align="center">
+<td width="50%" valign="top" align="center">
   
 <h3>📊 GitHub Stats</h3>
 <img src="stats-card.svg" width="450%"/>
