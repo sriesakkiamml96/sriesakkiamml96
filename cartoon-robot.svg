@@ -76,7 +76,7 @@
   <!-- Flat black background -->
   <rect width="300" height="260" fill="#000000"/>
 
-  <g class="roam">
+  <g transform="translate(-37.5, 20) scale(1.25)"><g class="roam">
     <g class="jump">
       <g class="tilt">
 
@@ -152,5 +152,5 @@
 
       </g>
     </g>
-  </g>
+  </g></g>
 </svg>
