@@ -18,28 +18,14 @@
 <img src="https://img.shields.io/badge/ROS_2-0A0F1F?style=for-the-badge&logo=ros&logoColor=00E5FF&labelColor=0A0F1F&color=00E5FF"/>
 
 <br/><br/>
+<br/><br/>
 
-<table>
-<tr>
-<td width="55%" valign="top">
-<h3>🚀 My Skills</h3>
-<img src="https://img.shields.io/badge/Python-75%25-00E5FF?style=for-the-badge&logo=python&logoColor=white&labelColor=0A0F1F"/><br/>
-<img src="https://img.shields.io/badge/OpenCV-70%25-00E5FF?style=for-the-badge&logo=opencv&logoColor=white&labelColor=0A0F1F"/><br/>
-<img src="https://img.shields.io/badge/C++-60%25-00E5FF?style=for-the-badge&logo=cplusplus&logoColor=white&labelColor=0A0F1F"/><br/>
-<img src="https://img.shields.io/badge/AI/ML-50%25-00E5FF?style=for-the-badge&labelColor=0A0F1F"/>
-</td>
-<td width="45%" valign="top">
-<h3>🎯 Current Focus</h3>
-☑️ Image Processing<br/>
-☑️ Computer Vision<br/>
-☑️ AI Robotics
-</td>
-</tr>
-</table>
+<img src="skills-swag.svg" width="100%" alt="My Skills and Current Focus"/>
 
 <br/>
 
 <h3>📁 Featured Projects</h3>
+
 <table>
 <tr>
 <td align="center" width="25%">
