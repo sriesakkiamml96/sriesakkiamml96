@@ -1,53 +1,62 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="300" height="260" viewBox="0 0 300 260">
   <defs>
-    <radialGradient id="bg" cx="50%" cy="38%" r="70%">
-      <stop offset="0" stop-color="#0C1222"/>
-      <stop offset="1" stop-color="#000000"/>
-    </radialGradient>
     <linearGradient id="shell" x1="0.1" y1="0" x2="0.7" y2="1">
       <stop offset="0" stop-color="#2A2E38"/>
-      <stop offset="0.2" stop-color="#101318"/>
-      <stop offset="0.75" stop-color="#050608"/>
-      <stop offset="1" stop-color="#0F1217"/>
+      <stop offset="0.25" stop-color="#101318"/>
+      <stop offset="1" stop-color="#050608"/>
     </linearGradient>
     <linearGradient id="edge" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#7FE7FF" stop-opacity="0.55"/>
-      <stop offset="0.4" stop-color="#1A1F28"/>
-      <stop offset="1" stop-color="#3A7F99" stop-opacity="0.35"/>
+      <stop offset="0" stop-color="#7FE7FF" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#3A7F99" stop-opacity="0.3"/>
     </linearGradient>
-    <radialGradient id="spec" cx="32%" cy="20%" r="45%">
-      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.28"/>
-      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
-    </radialGradient>
     <radialGradient id="visor" cx="50%" cy="35%" r="75%">
       <stop offset="0" stop-color="#0B1626"/>
-      <stop offset="0.7" stop-color="#020306"/>
       <stop offset="1" stop-color="#000000"/>
     </radialGradient>
-    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.16"/>
-      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    <linearGradient id="beam" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7FE7FF" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#7FE7FF" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#7FE7FF" stop-opacity="0"/>
     </linearGradient>
-    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
-      <stop offset="0" stop-color="#00E5FF" stop-opacity="0.10"/>
-      <stop offset="1" stop-color="#00E5FF" stop-opacity="0"/>
-    </radialGradient>
+    <clipPath id="screen"><rect x="110" y="56" width="80" height="60" rx="20"/></clipPath>
     <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feGaussianBlur stdDeviation="2.5" result="b"/>
       <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-    <filter id="blur6" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="6"/>
-    </filter>
-    <filter id="blur3" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="3"/>
     </filter>
   </defs>
 
   <style>
-    .float { animation: float 4.5s ease-in-out infinite; }
-    .tilt { animation: tilt 9s ease-in-out infinite; transform-origin: 150px 128px; }
-    .shadow { animation: shadow 4.5s ease-in-out infinite; transform-origin: 150px 238px; }
+    /* Roaming loop */
+    .roam { animation: roam 16s ease-in-out infinite; }
+    @keyframes roam {
+      0%, 100% { transform: translate(0px, 0px); }
+      25% { transform: translate(60px, -10px); }
+      50% { transform: translate(0px, 0px); }
+      75% { transform: translate(-60px, 10px); }
+    }
+
+    /* Jump with squash and stretch, every 3s */
+    .jump { transform-box: fill-box; transform-origin: center bottom; animation: jump 3s ease-in-out infinite; }
+    @keyframes jump {
+      0%, 100% { transform: translateY(0) scale(1, 1); }
+      10% { transform: translateY(0) scale(1.08, 0.88); }
+      30% { transform: translateY(-40px) scale(0.95, 1.06); }
+      50% { transform: translateY(0) scale(1.06, 0.92); }
+      56% { transform: translateY(0) scale(1, 1); }
+    }
+
+    /* Gentle tilt */
+    .tilt { transform-box: fill-box; transform-origin: center; animation: tilt 8s ease-in-out infinite; }
+    @keyframes tilt {
+      0%, 100% { transform: rotate(-3deg); }
+      50% { transform: rotate(3deg); }
+    }
+
+    /* Scanner beam inside the visor */
+    .scanner { animation: scanY 3.2s linear infinite; }
+    @keyframes scanY { 0% { transform: translateY(-60px); } 100% { transform: translateY(60px); } }
+
+    /* Expressions: six faces, 3s each, 18s loop */
     .face { opacity: 0; animation: show 18s infinite; }
     .f1 { animation-delay: 0s; }
     .f2 { animation-delay: 3s; }
@@ -55,18 +64,6 @@
     .f4 { animation-delay: 9s; }
     .f5 { animation-delay: 12s; }
     .f6 { animation-delay: 15s; }
-    @keyframes float {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-14px); }
-    }
-    @keyframes tilt {
-      0%, 100% { transform: rotate(-2deg); }
-      50% { transform: rotate(2deg); }
-    }
-    @keyframes shadow {
-      0%, 100% { transform: scale(1); opacity: 0.75; }
-      50% { transform: scale(0.7); opacity: 0.25; }
-    }
     @keyframes show {
       0% { opacity: 0; }
       1% { opacity: 1; }
@@ -76,81 +73,83 @@
     }
   </style>
 
-  <!-- Background -->
-  <rect width="300" height="260" rx="18" fill="url(#bg)"/>
-  <ellipse cx="150" cy="120" rx="120" ry="100" fill="url(#halo)"/>
+  <!-- Flat black background -->
+  <rect width="300" height="260" fill="#000000"/>
 
-  <!-- Floor shadow -->
-  <ellipse class="shadow" cx="150" cy="238" rx="70" ry="7" fill="#000000" filter="url(#blur6)"/>
+  <g class="roam">
+    <g class="jump">
+      <g class="tilt">
 
-  <g class="float">
-    <g class="tilt">
-      <!-- Ear panels -->
-      <rect x="26" y="108" width="16" height="54" rx="8" fill="url(#shell)" stroke="url(#edge)" stroke-width="1.2"/>
-      <rect x="258" y="108" width="16" height="54" rx="8" fill="url(#shell)" stroke="url(#edge)" stroke-width="1.2"/>
-      <circle cx="34" cy="135" r="2" fill="#7FE7FF" opacity="0.6"/>
-      <circle cx="266" cy="135" r="2" fill="#7FE7FF" opacity="0.6"/>
+        <!-- Ear panels -->
+        <rect x="83" y="72" width="12" height="36" rx="6" fill="url(#shell)" stroke="url(#edge)" stroke-width="1.2"/>
+        <rect x="205" y="72" width="12" height="36" rx="6" fill="url(#shell)" stroke="url(#edge)" stroke-width="1.2"/>
 
-      <!-- Shell body -->
-      <rect x="40" y="34" width="220" height="182" rx="64" fill="url(#shell)" stroke="url(#edge)" stroke-width="2"/>
-      <rect x="40" y="34" width="220" height="182" rx="64" fill="url(#spec)"/>
-      <!-- Top edge light -->
-      <path d="M92 40 Q150 30 208 40" fill="none" stroke="#FFFFFF" stroke-opacity="0.25" stroke-width="2" stroke-linecap="round"/>
-      <!-- Bottom occlusion -->
-      <path d="M70 206 Q150 216 230 206" fill="none" stroke="#000000" stroke-opacity="0.7" stroke-width="10" stroke-linecap="round" filter="url(#blur3)"/>
+        <!-- Antenna -->
+        <line x1="150" y1="40" x2="150" y2="24" stroke="#7FE7FF" stroke-width="2"/>
+        <circle cx="150" cy="22" r="4" fill="#7FE7FF" filter="url(#glow)"/>
 
-      <!-- Visor frame -->
-      <rect x="60" y="68" width="180" height="114" rx="42" fill="#000000" stroke="#1C232E" stroke-width="2"/>
-      <!-- Visor glass -->
-      <rect x="66" y="74" width="168" height="102" rx="36" fill="url(#visor)"/>
-      <rect x="66" y="74" width="168" height="102" rx="36" fill="none" stroke="#00E5FF" stroke-opacity="0.12" stroke-width="1.2"/>
-      <!-- Glass reflection -->
-      <path d="M80 84 Q150 68 220 84 L220 108 Q150 94 80 110 Z" fill="url(#glass)"/>
+        <!-- Head shell -->
+        <rect x="95" y="40" width="110" height="92" rx="34" fill="url(#shell)" stroke="url(#edge)" stroke-width="2"/>
+        <path d="M112 50 Q150 40 188 50" fill="none" stroke="#FFFFFF" stroke-opacity="0.25" stroke-width="2" stroke-linecap="round"/>
 
-      <!-- 1. Happy -->
-      <g class="face f1" filter="url(#glow)" stroke="#7FE7FF" fill="none" stroke-width="7" stroke-linecap="round">
-        <path d="M92 118 Q107 96 122 118"/>
-        <path d="M178 118 Q193 96 208 118"/>
-        <path d="M128 140 Q150 158 172 140"/>
-      </g>
+        <!-- Visor -->
+        <rect x="110" y="56" width="80" height="60" rx="20" fill="url(#visor)" stroke="#7FE7FF" stroke-opacity="0.2"/>
 
-      <!-- 2. Sad -->
-      <g class="face f2" filter="url(#glow)" fill="#7FE7FF">
-        <ellipse cx="107" cy="112" rx="10" ry="12"/>
-        <ellipse cx="193" cy="112" rx="10" ry="12"/>
-        <path d="M86 92 L122 102" stroke="#7FE7FF" stroke-width="6" stroke-linecap="round"/>
-        <path d="M214 92 L178 102" stroke="#7FE7FF" stroke-width="6" stroke-linecap="round"/>
-        <path d="M132 156 Q150 142 168 156" fill="none" stroke="#7FE7FF" stroke-width="6" stroke-linecap="round"/>
-      </g>
+        <!-- Scanner beam -->
+        <g clip-path="url(#screen)">
+          <rect class="scanner" x="110" y="56" width="80" height="20" fill="url(#beam)"/>
+        </g>
 
-      <!-- 3. Bored -->
-      <g class="face f3" filter="url(#glow)" stroke="#7FE7FF" stroke-width="9" stroke-linecap="round">
-        <line x1="92" y1="112" x2="124" y2="112"/>
-        <line x1="176" y1="112" x2="208" y2="112"/>
-        <line x1="136" y1="142" x2="164" y2="142" stroke-width="6"/>
-      </g>
+        <!-- Expressions -->
+        <g clip-path="url(#screen)">
 
-      <!-- 4. Doubtful -->
-      <g class="face f4" filter="url(#glow)" fill="#7FE7FF">
-        <ellipse cx="107" cy="112" rx="10" ry="11"/>
-        <line x1="178" y1="116" x2="210" y2="100" stroke="#7FE7FF" stroke-width="7" stroke-linecap="round"/>
-        <path d="M134 146 Q142 140 150 146 Q158 152 166 144" fill="none" stroke="#7FE7FF" stroke-width="5" stroke-linecap="round"/>
-      </g>
+          <!-- 1. Happy -->
+          <g class="face f1" filter="url(#glow)" fill="none" stroke="#7FE7FF" stroke-width="4" stroke-linecap="round">
+            <path d="M125 84 Q132 74 139 84"/>
+            <path d="M161 84 Q168 74 175 84"/>
+            <path d="M134 98 Q150 110 166 98"/>
+          </g>
 
-      <!-- 5. Love -->
-      <g class="face f5" filter="url(#glow)" fill="#FF6B9A">
-        <path transform="translate(107,110) scale(3)" d="M0 6 C-8 -2 -2 -8 0 -3 C2 -8 8 -2 0 6Z"/>
-        <path transform="translate(193,110) scale(3)" d="M0 6 C-8 -2 -2 -8 0 -3 C2 -8 8 -2 0 6Z"/>
-        <path d="M136 144 Q150 156 164 144" fill="none" stroke="#FF6B9A" stroke-width="6" stroke-linecap="round"/>
-      </g>
+          <!-- 2. Sad -->
+          <g class="face f2" filter="url(#glow)" fill="#7FE7FF">
+            <ellipse cx="132" cy="82" rx="5" ry="6"/>
+            <ellipse cx="168" cy="82" rx="5" ry="6"/>
+            <path d="M122 72 L138 76" stroke="#7FE7FF" stroke-width="3" stroke-linecap="round"/>
+            <path d="M178 72 L162 76" stroke="#7FE7FF" stroke-width="3" stroke-linecap="round"/>
+            <path d="M136 106 Q150 96 164 106" fill="none" stroke="#7FE7FF" stroke-width="3.5" stroke-linecap="round"/>
+          </g>
 
-      <!-- 6. Angry -->
-      <g class="face f6" filter="url(#glow)" stroke="#7FE7FF" stroke-linecap="round">
-        <path d="M84 96 L122 110" stroke-width="8"/>
-        <path d="M216 96 L178 110" stroke-width="8"/>
-        <ellipse cx="107" cy="118" rx="11" ry="7" fill="#7FE7FF" stroke="none"/>
-        <ellipse cx="193" cy="118" rx="11" ry="7" fill="#7FE7FF" stroke="none"/>
-        <path d="M132 150 Q150 136 168 150" fill="none" stroke-width="7"/>
+          <!-- 3. Bored -->
+          <g class="face f3" filter="url(#glow)" stroke="#7FE7FF" stroke-width="5" stroke-linecap="round">
+            <line x1="124" y1="82" x2="140" y2="82"/>
+            <line x1="160" y1="82" x2="176" y2="82"/>
+            <line x1="140" y1="100" x2="160" y2="100" stroke-width="3"/>
+          </g>
+
+          <!-- 4. Doubtful -->
+          <g class="face f4" filter="url(#glow)" fill="#7FE7FF">
+            <ellipse cx="132" cy="82" rx="5" ry="6"/>
+            <line x1="160" y1="86" x2="176" y2="76" stroke="#7FE7FF" stroke-width="4" stroke-linecap="round"/>
+            <path d="M138 102 Q143 97 148 102 Q153 107 158 100" fill="none" stroke="#7FE7FF" stroke-width="3" stroke-linecap="round"/>
+          </g>
+
+          <!-- 5. Love -->
+          <g class="face f5" filter="url(#glow)" fill="#FF6B9A">
+            <path transform="translate(132,80) scale(1.8)" d="M0 6 C-8 -2 -2 -8 0 -3 C2 -8 8 -2 0 6Z"/>
+            <path transform="translate(168,80) scale(1.8)" d="M0 6 C-8 -2 -2 -8 0 -3 C2 -8 8 -2 0 6Z"/>
+            <path d="M136 98 Q150 110 164 98" fill="none" stroke="#FF6B9A" stroke-width="4" stroke-linecap="round"/>
+          </g>
+
+          <!-- 6. Angry -->
+          <g class="face f6" filter="url(#glow)" stroke="#7FE7FF" stroke-linecap="round">
+            <path d="M122 70 L140 80" stroke-width="5"/>
+            <path d="M178 70 L160 80" stroke-width="5"/>
+            <ellipse cx="132" cy="86" rx="6" ry="4" fill="#7FE7FF" stroke="none"/>
+            <ellipse cx="168" cy="86" rx="6" ry="4" fill="#7FE7FF" stroke="none"/>
+            <path d="M138 106 Q150 96 162 106" fill="none" stroke-width="4"/>
+          </g>
+        </g>
+
       </g>
     </g>
   </g>
