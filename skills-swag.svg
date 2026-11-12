@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="400" viewBox="0 0 900 400">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#070C18"/>
+      <stop offset="1" stop-color="#02040A"/>
+    </linearGradient>
+    <linearGradient id="neon" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#00E5FF"/>
+      <stop offset="1" stop-color="#A78BFA"/>
+    </linearGradient>
+    <linearGradient id="scan" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#00E5FF" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#00E5FF" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#00E5FF" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-50%" width="160%" height="200%">
+      <feGaussianBlur stdDeviation="2.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="frame"><rect width="900" height="400" rx="16"/></clipPath>
+  </defs>
+
+  <style>
+    .scanbar { animation: scanY 4s linear infinite; }
+    .flick { animation: flick 5s infinite; }
+    .bar { transform-box: fill-box; transform-origin: left center; animation: grow 3s ease-out infinite alternate; }
+    .b2 { animation-delay: 0.4s; }
+    .b3 { animation-delay: 0.8s; }
+    .b4 { animation-delay: 1.2s; }
+    .check { animation: check 3.6s steps(1) infinite; }
+    .k2 { animation-delay: 0.9s; }
+    .k3 { animation-delay: 1.8s; }
+    .k4 { animation-delay: 2.7s; }
+    .pulse { animation: pulse 2.4s ease-in-out infinite; }
+
+    @keyframes scanY { 0% { transform: translateY(-80px); } 100% { transform: translateY(420px); } }
+    @keyframes flick {
+      0%, 88%, 100% { opacity: 1; }
+      90% { opacity: 0.6; }
+      91% { opacity: 1; }
+      93% { opacity: 0.8; }
+      94% { opacity: 1; }
+    }
+    @keyframes grow { 0% { transform: scaleX(0.3); } 100% { transform: scaleX(1); } }
+    @keyframes check {
+      0% { opacity: 0.25; }
+      20% { opacity: 1; }
+      100% { opacity: 1; }
+    }
+    @keyframes pulse {
+      0%, 100% { stroke-opacity: 0.4; }
+      50% { stroke-opacity: 1; }
+    }
+  </style>
+
+  <g clip-path="url(#frame)">
+    <rect width="900" height="400" rx="16" fill="url(#bg)"/>
+    <rect class="scanbar" x="0" y="0" width="900" height="80" fill="url(#scan)"/>
+
+    <!-- Outer frame -->
+    <rect x="1" y="1" width="898" height="398" rx="16" fill="none" stroke="url(#neon)" stroke-opacity="0.4" stroke-width="1.5"/>
+
+    <!-- ===== My Skills panel ===== -->
+    <rect class="pulse" x="24" y="24" width="420" height="352" rx="14" fill="#0A1222" stroke="#00E5FF" stroke-width="1.5"/>
+    <text class="flick" x="50" y="70" font-family="Orbitron, Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#FFFFFF" filter="url(#glow)">MY <tspan fill="#00E5FF">SKILLS</tspan></text>
+    <line x1="48" y1="88" x2="420" y2="88" stroke="#00E5FF" stroke-opacity="0.4"/>
+
+    <g font-family="Consolas, Courier New, monospace" font-size="13" font-weight="700" letter-spacing="2" fill="#E6F7FF">
+      <text x="50" y="128">PYTHON</text>
+      <text x="50" y="186">OPENCV</text>
+      <text x="50" y="244">C++</text>
+      <text x="50" y="302">AI/ML</text>
+    </g>
+
+    <!-- Bar tracks -->
+    <g fill="#16203A">
+      <rect x="180" y="114" width="200" height="12" rx="6"/>
+      <rect x="180" y="172" width="200" height="12" rx="6"/>
+      <rect x="180" y="230" width="200" height="12" rx="6"/>
+      <rect x="180" y="288" width="200" height="12" rx="6"/>
+    </g>
+    <!-- Bars: 75%, 70%, 60%, 50% of 200px -->
+    <rect class="bar" x="180" y="114" width="150" height="12" rx="6" fill="url(#neon)" filter="url(#glow)"/>
+    <rect class="bar b2" x="180" y="172" width="140" height="12" rx="6" fill="url(#neon)" filter="url(#glow)"/>
+    <rect class="bar b3" x="180" y="230" width="120" height="12" rx="6" fill="url(#neon)" filter="url(#glow)"/>
+    <rect class="bar b4" x="180" y="288" width="100" height="12" rx="6" fill="url(#neon)" filter="url(#glow)"/>
+
+    <!-- Percentage tags -->
+    <g font-family="Consolas, Courier New, monospace" font-size="12" font-weight="700" fill="#00E5FF" text-anchor="end">
+      <text x="400" y="125">75%</text>
+      <text x="400" y="183">70%</text>
+      <text x="400" y="241">60%</text>
+      <text x="400" y="299">50%</text>
+    </g>
+
+    <!-- ===== Current Focus panel ===== -->
+    <rect class="pulse" x="468" y="24" width="408" height="352" rx="14" fill="#0A1222" stroke="#A78BFA" stroke-width="1.5"/>
+    <text class="flick" x="494" y="70" font-family="Orbitron, Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#FFFFFF" filter="url(#glow)">CURRENT <tspan fill="#A78BFA">FOCUS</tspan></text>
+    <line x1="492" y1="88" x2="850" y2="88" stroke="#A78BFA" stroke-opacity="0.4"/>
+
+    <!-- Checklist -->
+    <g font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#E6F7FF">
+      <rect x="494" y="116" width="22" height="22" rx="4" fill="#0B1A2E" stroke="#00E5FF" stroke-width="1.5"/>
+      <path class="check" d="M499 127 L503 131 L511 121" fill="none" stroke="#00E5FF" stroke-width="2.5" stroke-linecap="round"/>
+      <text x="530" y="134">Image Processing</text>
+
+      <rect x="494" y="176" width="22" height="22" rx="4" fill="#0B1A2E" stroke="#A78BFA" stroke-width="1.5"/>
+      <path class="check k2" d="M499 187 L503 191 L511 181" fill="none" stroke="#A78BFA" stroke-width="2.5" stroke-linecap="round"/>
+      <text x="530" y="194">Computer Vision</text>
+
+      <rect x="494" y="236" width="22" height="22" rx="4" fill="#0B1A2E" stroke="#00E5FF" stroke-width="1.5"/>
+      <path class="check k3" d="M499 247 L503 251 L511 241" fill="none" stroke="#00E5FF" stroke-width="2.5" stroke-linecap="round"/>
+      <text x="530" y="254">AI Robotics</text>
+    </g>
+  </g>
+</svg>
