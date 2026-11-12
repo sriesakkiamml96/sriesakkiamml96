@@ -9,10 +9,7 @@
 <table>
 <tr>
 <td width="68%" valign="top">
-
-<h2>👋 Hi, I’m Sri Esakkiammal</h2>
-<b>Computer Vision Enthusiast | AI Learner | Future Roboticist</b>
-<p>I’m on a journey to explore how machines can see, understand, and interact with the world. My focus is on Computer Vision, Machine Learning and Robotics.</p>
+<img src="intro-animated.svg" width="100%" alt="Hi, I'm Sri Esakkiammal"/>
 
 <img src="https://img.shields.io/badge/Python-0A0F1F?style=for-the-badge&logo=python&logoColor=00E5FF&labelColor=0A0F1F&color=00E5FF"/>
 <img src="https://img.shields.io/badge/C++-0A0F1F?style=for-the-badge&logo=cplusplus&logoColor=00E5FF&labelColor=0A0F1F&color=00E5FF"/>
