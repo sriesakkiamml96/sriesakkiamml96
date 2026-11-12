@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="90" viewBox="0 0 900 90">
+  <defs>
+    <linearGradient id="title" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="0.5" stop-color="#7FE7FF"/>
+      <stop offset="1" stop-color="#A78BFA"/>
+    </linearGradient>
+    <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="rule" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#00E5FF" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#00E5FF" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#A78BFA" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow" x="-10%" y="-40%" width="120%" height="180%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="text"><text x="450" y="58" text-anchor="middle" font-family="Orbitron, Arial Black, Impact, sans-serif" font-size="34" font-weight="700" letter-spacing="6">FEATURED PROJECTS</text></clipPath>
+  </defs>
+
+  <style>
+    .shine { animation: shine 4s ease-in-out infinite; }
+    .flick { animation: flick 5s infinite; }
+    .corner { animation: blink 2s steps(2) infinite; }
+    .rule { animation: ruleMove 3s ease-in-out infinite; }
+    @keyframes shine { 0%,55% { transform: translateX(-450px); } 100% { transform: translateX(450px); } }
+    @keyframes flick { 0%,92%,100% { opacity: 1; } 93% { opacity: 0.55; } 94% { opacity: 1; } 96% { opacity: 0.75; } 97% { opacity: 1; } }
+    @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
+    @keyframes ruleMove { 0%,100% { opacity: 0.5; } 50% { opacity: 1; } }
+  </style>
+
+  <!-- Corner brackets -->
+  <g stroke="#00E5FF" stroke-width="2" fill="none" stroke-linecap="square">
+    <path class="corner" d="M10 8 L10 26 M10 8 L28 8"/>
+    <path class="corner" d="M890 8 L890 26 M890 8 L872 8"/>
+    <path class="corner" d="M10 82 L10 64 M10 82 L28 82"/>
+    <path class="corner" d="M890 82 L890 64 M890 82 L872 82"/>
+  </g>
+
+  <!-- Title with gradient and light sweep -->
+  <g class="flick" filter="url(#glow)">
+    <text x="450" y="58" text-anchor="middle" font-family="Orbitron, Arial Black, Impact, sans-serif" font-size="34" font-weight="700" letter-spacing="6" fill="url(#title)">FEATURED PROJECTS</text>
+  </g>
+  <g clip-path="url(#text)">
+    <rect class="shine" x="300" y="20" width="120" height="50" fill="url(#sheen)"/>
+  </g>
+
+  <!-- Glowing rule under title -->
+  <rect class="rule" x="150" y="72" width="600" height="2" fill="url(#rule)"/>
+</svg>
